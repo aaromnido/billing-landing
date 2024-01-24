@@ -1,11 +1,11 @@
-# Learning Exercise Proposal
+
+# Astro Starter Kit: Basics
+
+## Learning Exercise Proposal-
 
 This project was created as a learning exercise to experiment with and propose ideas for a coding project. It serves as a sandbox for brainstorming, prototyping, and refining concepts before implementing them in a real project. The goal is to use this as an opportunity to explore different technologies, techniques, architectures etc. and determine feasibility and interest before committing fully. Feedback and suggestions are welcome!
 
 Let me know if you would like me to modify or expand on this further. I aimed to improve clarity and provide more details on the purpose and goals.
-
-# Astro Starter Kit: Basics
-
 ```sh
 npm create astro@latest -- --template basics
 ```
