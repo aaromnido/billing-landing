@@ -1,4 +1,11 @@
+---
+interface Props {
+	styles?: string;
+}
+
+const {styles} = Astro.props;
+---
 <img 
-    class="border rounded-lg max-w-[100%] lg:max-w-[60rem] mx-auto"
+    class={`border rounded-lg mx-auto max-w-[100%] ${styles}`}
     src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/hero/dashboard-mockup.svg"
     alt="Billin Screenshot">
