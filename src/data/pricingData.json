@@ -1,6 +1,7 @@
 [
     {
         "plan": "Plan Básico",
+        "popular": false,
         "descripcion": "Ideal para los que empiezan.",
         "precioPorMes": "8",
         "precioPorAno": "6,6",
@@ -22,9 +23,10 @@
     },
     {
         "plan": "Plan Pro",
-        "descripcion": "Facturado mensualmente. 180€ + IVA al año.",
+        "popular": true,
+        "descripcion": "Perfecto para ahorrar mucho tiempo.",
         "precioPorMes": "15",
-        "precioPorMAno": "12,5",
+        "precioPorAno": "12,5",
         "facturacionAnual": "Facturado mensualmente. 180 € al año.",
         "clientes": "De 6 a 50 clientes.",
         "usuariosBillin": "3 usuarios Billin.",
@@ -43,9 +45,10 @@
     },
     {
         "plan": "Plan Unlimited",
-        "descripcion": "Facturado mensualmente. 288€ + IVA al año.",
+        "popular": false,
+        "descripcion": "El plan para ir a por todas.",
         "precioPorMes": "24",
-        "precioPorMAno": "20",
+        "precioPorAno": "20",
         "facturacionAnual": "Facturado mensualmente. 288 € al año.",
         "clientes": "Para más de 50 clientes.",
         "usuariosBillin": "Sin límite de usuarios Billin.",

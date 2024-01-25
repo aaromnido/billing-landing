@@ -21,7 +21,7 @@ const {comment, user, date, avatar} = Astro.props;
                 <p class="text-xl font-medium text-gray-900">"{comment}"</p>
             </blockquote>
             <figcaption class="flex items-center justify-center mt-6">
-                <img class="w-6 h-6 rounded-full" src={`/images/${avatar}`} alt="profile picture">
+                <img class="w-6 h-6 rounded-full" src={`/images/${avatar}`} alt="User profile">
                 <div class="flex items-center divide-x divide-gray-500">
                     <div class="px-3 font-medium text-gray-900">{user}</div>
                     <div class="px-3 text-sm font-light text-gray-500">{date}</div>

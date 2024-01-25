@@ -1,9 +1,12 @@
 ---
 import IconTick from "./Atoms/IconTick.astro";
 import pricingData from '../data/pricingData.json'
+import CtaButtonSecondaryLarge from "./Atoms/CtaButtonSecondaryLarge.astro";
+import CtaButtonPrimaryLarge from "./Atoms/CtaButtonPrimaryLarge.astro";
 const PLANS = pricingData;
-const planActive = "Anual";
+let planActive = "Anual";
 ---
+
 <header class="text-center">
     <label class="relative inline-flex items-center mb-5 cursor-pointer">
         <input type="checkbox" value="" class="sr-only peer" checked>
@@ -15,19 +18,23 @@ const planActive = "Anual";
 <section class="space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-10 lg:space-y-0">
 
     {
-        PLANS.map(({ plan, descripcion, precioPorMes, precioPorAno, facturacionAnual, clientes, usuariosBillin, productos, escaneadoInteligente, seguimientoDeDocumentos, presupuestosYFacturas, facturasElectronicas, diseñosDeFacturas, personalizacionDeComunicaciones, facturasConGestor, soporte, appMovil, integracionConShopify, integracionConApiPublica }) => (
-
-            <div class="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg xl:p-8 border border-slate-200 w-[100%]">
+        PLANS.map(({ plan, descripcion, precioPorAno, clientes, usuariosBillin, productos, escaneadoInteligente, seguimientoDeDocumentos, presupuestosYFacturas, facturasElectronicas, diseñosDeFacturas, personalizacionDeComunicaciones, facturasConGestor, soporte, appMovil, integracionConShopify, integracionConApiPublica, popular }) => (
+            
+            <div class={`bg-white ${popular ? 'border-blue-400 border-2 bg-blue-600 text-white' : ''} flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 rounded-lg xl:p-8 border border-slate-200 w-[100%]`}>
                 <header>
                     <h3 class="mb-4 text-2xl font-semibold">{plan}</h3>
-                    <p class="font-light text-gray-500 text-lg md:text-sm">{descripcion}</p>
+                    <p class="font-light text-lg md:text-sm">{descripcion}</p>
                     <div class="flex justify-center items-baseline my-8">
                         <span class="mr-2 text-5xl font-extrabold">{precioPorAno}€</span>
-                        <span class="text-gray-500">/MES + IVA</span>
+                        <span>/MES + IVA</span>
                     </div>
+
+                    <li class="flex items-center space-x-3 justify-center">
+                        {popular ? <CtaButtonSecondaryLarge /> : <CtaButtonPrimaryLarge />}
+                    </li>
                 </header>
                 <!-- ** List ** -->
-                <ul role="list" class="space-y-4 text-left">
+                <ul role="list" class="space-y-4 text-left text-pretty">
                     {clientes &&
                         <li class="flex items-center space-x-3">
                         <IconTick />
@@ -112,9 +119,7 @@ const planActive = "Anual";
                         <span>{integracionConApiPublica}</span>
                         </li>
                     }
-
                 </ul>
-                <a href="#" class="text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:text-white  dark:focus:ring-primary-900">Get started</a>
             </div>
 
         ))
