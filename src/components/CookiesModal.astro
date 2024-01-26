@@ -1,0 +1,40 @@
+<div 
+    id="default-modal"
+    tabindex="-1"
+    class="fixed top-0 right-0 left-0 z-50 h-full">
+    <div class="flex flex-col-reverse w-full p-4 h-full">
+        <!-- Modal content -->
+        <div class="bg-white border border-slate-300 p-4 flex flex-col md:flex-row">
+            <!-- Modal body -->
+            <div class="space-y-4 flex-1">
+                <p class="text-xs leading-relaxed text-gray-500 dark:text-gray-400">
+                    Usamos cookies esenciales para que nuestro sitio funcione. Con su consentimiento, también podremos usar cookies no esenciales para mejorar la experiencia del usuario, personalizar el contenido y analizar el tráfico del sitio web. Por estos motivos, podríamos compartir sus datos de uso del sitio con nuestros socios de análisis. Al hacer clic en “Aceptar“, acepta el uso de cookies de nuestro sitio web tal como se describe en nuestra <a href="#" class="text-blue-600">Política de cookies</a>. Puede cambiar sus ajustes de cookies en cualquier momento haciendo clic en <a href="#" class="text-blue-600">Preferencias</a>.
+                </p>
+            </div>
+            <!-- Modal footer -->
+            <div class="flex items-start min-w-[22rem] mt-4 md:mt-0">
+                <button 
+                    data-modal-hide="default-modal"
+                    aria-hidden="true" 
+                    type="button" 
+                    class="ms-3 text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10">
+                    Preferencias
+                </button>
+                <button 
+                    data-modal-hide="default-modal"
+                    aria-hidden="true" 
+                    type="button" 
+                    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center ml-2">
+                   Rechazar
+                </button>
+                <button 
+                    data-modal-hide="default-modal"
+                    aria-hidden="true" 
+                    type="button" 
+                    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center ml-2">
+                    Aceptar
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
