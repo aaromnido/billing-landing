@@ -2,6 +2,9 @@
   "name": "billin-landing",
   "type": "module",
   "version": "0.0.1",
+  "engines": {
+    "npm": "20.x"
+  },
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
