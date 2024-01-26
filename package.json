@@ -19,5 +19,8 @@
   },
   "devDependencies": {
     "sass": "^1.70.0"
+  },
+  "resolutions": {
+    "rollup": "npm:@rollup/wasm-node"
   }
 }
