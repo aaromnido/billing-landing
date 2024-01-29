@@ -14,7 +14,7 @@ const {question, answer} = Astro.props;
     class="font-medium border border-gray-200 bg-white rounded-md overflow-hidden mb-1">
     <dt
         x-on:click="open =!open"
-        class="flex items-center justify-between w-full p-5 font-medium text-gray-500 border-b border-b-1 focus:ring-4 focus:ring-transparent hover:bg-gray-100 gap-3 bg-gray-50 rounded-md"
+        class="flex items-center justify-between w-full p-5 font-medium text-gray-500 border-b border-b-1 focus:ring-4 focus:ring-transparent hover:bg-gray-100 gap-3 bg-gray-50 rounded-md cursor-pointer"
     >
         <span class="text-left">{question}</span>
         <div :class="{'rotate-180': open, 'rotate-0': !open}"><IconArrow /></div>
