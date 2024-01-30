@@ -3,22 +3,39 @@ import CtaButtonPrimaryLarge from "./Atoms/CtaButtonPrimaryLarge.astro";
 import DummyImageScreenshot from "./Atoms/DummyImageScreenshot.astro";
 ---
 
-<section class="bg-gray-200 px-4" id="hero">
+<section class="hero" id="hero">
 
-    <div class="pt-36 text-center text-balance">
+    <div class="hero-container">
 
-        <div class="max-w-[60rem] mx-auto lg:px-12 mb-10 lg:mb-16">
-            <h1 class="mb-4 text-5xl font-extrabold tracking-tight leading-none text-gray-900 lg:text-6xl dark:text-white">
+        <header class="hero-header">
+            <h1 class="mb-4 text-5xl font-extrabold tracking-tight leading-none lg:text-6xl">
                 Factura fácil con Billin
             </h1>
-            <h2 class="mb-8 text-lg font-normal text-pretty">
+            <h2 class="mb-8 text-lg font-normal">
                 Crea y envía tus facturas a la velocidad de la luz
             </h2>
     
             <CtaButtonPrimaryLarge />
-        </div>
+        </header>
 
-        <DummyImageScreenshot styles="lg:max-w-[60rem]" />
+        <img src="/images/hero_image.webp" alt="Hero image" class="hero-image mx-auto -mb-8" />
     </div>
 
 </section>
+
+<style>
+    .hero {
+        background-color: black;
+        @apply px-2 md:pt-12 text-white overflow-hidden;
+        background-image: url("/images/hero_bg.webp");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .hero-container {
+        @apply pt-36 px-1 text-center text-balance;
+    }
+    .hero-header {
+        @apply max-w-[60rem] px-10 mx-auto lg:px-12 mb-10 lg:mb-16;
+    }
+</style>
