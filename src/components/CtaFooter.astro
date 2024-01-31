@@ -1,23 +1,48 @@
 ---
-import CtaButtonSecondaryLarge from "./Atoms/CtaButtonSecondaryLarge.astro";
+import CtaButtonPrimaryLarge from "./Atoms/CtaButtonPrimaryLarge.astro";
 import DummyImageScreenshot from "./Atoms/DummyImageScreenshot.astro";
 ---
 
-<section class="bg-white py-20 px-6 text-pretty" id="ctaFooter">
-    <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+<section class="ctaFooter" id="ctaFooter">
+    <div class="ctaFooter-container">
 
-        <div class="md:grid md:grid-cols-2 gap-8 xl:gap-16 items-center pt-2 md:pt-16 px-8 lg:px-8 mx-auto max-w-screen-xl bg-blue-600 rounded-xl text-white">
-            <div class="mt-8 md:mt-0">
+        <article class="ctaFooter-card">
+            <div class="ctaFooter-card-content">
                 <h2 class="mb-4 text-4xl tracking-tight font-extrabold">
                     Prueba gratis todas las funcionalidades de facturas durante 30 días
                 </h2>
                 <p class="mb-6 font-light text-blue-200 md:text-lg">
                     Más de 180.000 autónomos y pymes ya crean sus facturas con Billin. Sin incluir ninguna tarjeta de crédito.
                 </p>
-                <CtaButtonSecondaryLarge />
+                <CtaButtonPrimaryLarge />
             </div>
-            <DummyImageScreenshot styles="md:order-last" />
-        </div>
+            <figure class="ctaFooter-card-image">
+                <img src="/images/image_cta.webp" alt="Prueba gratuita de Billin durante 30 días" />
+            </figure>
+        </article>
 
     </div>
 </section>
+
+<style>
+    .ctaFooter{
+        @apply bg-white py-[100px] px-4 text-pretty;
+    }
+    .ctaFooter-container{
+        @apply mx-auto max-w-screen-xl;
+    }
+    .ctaFooter-card{
+        @apply md:grid md:grid-cols-2 gap-8 xl:gap-16 items-start pl-12 mx-auto max-w-screen-xl rounded-3xl text-white overflow-hidden shadow-lg shadow-blue-500/40 pt-10 md:pt-16;
+        background-color: #1C64F2;
+        background-image: url("/images/hero_bg.webp");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .ctaFooter-card-image{
+        @apply mt-10 md:mt-0 -mb-8 -mr-6;
+    }
+    .ctaFooter-card-content{
+        @apply mt-6 mr-10;
+    }
+</style>
