@@ -3,11 +3,11 @@ import CtaButtonPrimaryMedium from "./Atoms/CtaButtonPrimaryMedium.astro";
 import DummyImageScreenshot from "./Atoms/DummyImageScreenshot.astro";
 ---
 
-<section class="bg-white py-20" id="features">
+<section class="features" id="features">
 
     <!-- ** Feature ** -->
-    <div class="md:grid md:grid-cols-2 gap-8 xl:gap-16 items-center py-16 px-4 lg:px-6 mx-auto max-w-screen-xl text-center md:text-left text-pretty">
-        <DummyImageScreenshot styles="md:order-last" />
+    <div class="features-feature">
+        <img src="/images/image_1.webp" alt="Crea y envía" class="md:order-last mx-auto">
         <div class="my-8 md:mt-0">
             <h2 class="mb-4 text-4xl tracking-tight font-extrabold">
                 Crea, envía y gestiona tus facturas a la velocidad de la luz
@@ -21,8 +21,8 @@ import DummyImageScreenshot from "./Atoms/DummyImageScreenshot.astro";
     </div>
 
     <!-- ** Feature ** -->
-    <div class="md:grid md:grid-cols-2 gap-8 xl:gap-16 items-center py-16 px-4 lg:px-6 mx-auto max-w-screen-xl text-center md:text-left text-pretty">
-        <DummyImageScreenshot />
+    <div class="features-feature">
+        <img src="/images/image_2.webp" alt="Factura online" class="mx-auto">
         <div class="my-8 md:mt-0">
             <h2 class="mb-4 text-4xl tracking-tight font-extrabold">
                 Factura online
@@ -35,8 +35,8 @@ import DummyImageScreenshot from "./Atoms/DummyImageScreenshot.astro";
     </div>
 
     <!-- ** Feature ** -->
-    <div class="md:grid md:grid-cols-2 gap-8 xl:gap-16 items-center py-16 px-4 lg:px-6 mx-auto max-w-screen-xl text-center md:text-left text-pretty">
-        <DummyImageScreenshot styles="md:order-last" />
+    <div class="features-feature">
+        <img src="/images/image_1.webp" alt="Ayuda profesional" class="md:order-last mx-auto">
         <div class="my-8 md:mt-0">
             <h2 class="mb-4 text-4xl tracking-tight font-extrabold">
                 Ayuda profesional
@@ -49,8 +49,8 @@ import DummyImageScreenshot from "./Atoms/DummyImageScreenshot.astro";
     </div>
 
     <!-- ** Feature ** -->
-    <div class="md:grid md:grid-cols-2 gap-8 xl:gap-16 items-center py-16 px-4 lg:px-6 mx-auto max-w-screen-xl text-center md:text-left text-pretty">
-        <DummyImageScreenshot />
+    <div class="features-feature">
+        <img src="/images/image_1.webp" alt="Bajo control" class="mx-auto">
         <div class="my-8 md:mt-0">
             <h2 class="mb-4 text-4xl tracking-tight font-extrabold">
                 Todo bajo control desde un mismo lugar
@@ -63,8 +63,8 @@ import DummyImageScreenshot from "./Atoms/DummyImageScreenshot.astro";
     </div>
 
     <!-- ** Feature ** -->
-    <div class="md:grid md:grid-cols-2 gap-8 xl:gap-16 items-center py-16 px-4 lg:px-6 mx-auto max-w-screen-xl text-center md:text-left text-pretty">
-        <DummyImageScreenshot styles="md:order-last" />
+    <div class="features-feature">
+        <img src="/images/image_1.webp" alt="Elige" class="md:order-last mx-auto">
         <div class="my-8 md:mt-0">
             <h2 class="mb-4 text-4xl tracking-tight font-extrabold">
                 Elige y personaliza plantillas para tus facturas
@@ -76,5 +76,17 @@ import DummyImageScreenshot from "./Atoms/DummyImageScreenshot.astro";
         </div>
     </div>
 
-
 </section>
+
+<style>
+    .features{
+        @apply py-20;
+        background-image: url("/images/blue_shadow.webp");
+        background-position: top center;
+        background-repeat: no-repeat;
+    }
+    .features-feature{
+        @apply md:grid md:grid-cols-2 gap-8 xl:gap-16 items-center py-16 px-4 lg:px-6 mx-auto max-w-screen-xl text-center md:text-left text-pretty;
+        color: var(--black);
+    }
+</style>
