@@ -2,10 +2,9 @@
 import PriceTierCard from './Atoms/PriceTierCard.astro';
 ---
 
-<section class="bg-slate-100 py-20 px-6" id="pricing">
-    <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
-
-        <header class="mx-auto max-w-screen-md text-center mb-8 lg:mb-12 text-balance">
+<section class="pricing" id="pricing">
+    <div class="pricing-container">
+        <header class="pricing-header">
             <h2 class="mb-4 text-4xl tracking-tight font-extrabold">
                 Nuestros planes están pensados especialmente para autónomos y PYMEs
             </h2>
@@ -13,8 +12,18 @@ import PriceTierCard from './Atoms/PriceTierCard.astro';
                 Tenemos un plan a tu medidad, plenamente enfocado para que tú no te tengas que ocupar de nada.
             </p>
         </header>
-
         <PriceTierCard />
-
     </div>
   </section>
+
+<style>
+    .pricing{
+        @apply bg-white py-[100px] px-6 text-[var(--black)];
+    }
+    .pricing-container{
+        @apply py-8 px-4 mx-auto max-w-screen-xl md:py-16 md:px-6;
+    }
+    .pricing-header{
+        @apply mx-auto max-w-screen-md text-center mb-10 md:mb-16 text-balance;
+    }
+</style>
