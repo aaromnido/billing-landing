@@ -2,68 +2,68 @@
 import Testimonial from "./Testimonial.astro";
 ---
 
-<section class="bg-white py-20" id="testimonials">
+<section class="testimonials" id="testimonials">
 
     <div id="default-carousel" class="relative w-full max-w-[60rem] mx-auto" data-carousel="slide">
 
         <h2 class="text-4xl font-extrabold text-center">Testimonios de nuestros usuarios</h2>
         
         <!-- Carousel wrapper -->
-        <div class="relative h-64 md:h-48  overflow-hidden rounded-lg mt-10 mb-4 px-16 text-pretty">
+        <div class="relative h-[20rem] md:h-[14rem]  overflow-hidden rounded-lg mt-10 mb-4 px-16 text-pretty">
             <!-- * Item 1 * -->
-            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <article class="hidden duration-700 ease-in-out" data-carousel-item>
                 <Testimonial 
                     comment="Pues la verdad que es una buena opción de facturación muy fácil y el personal muy amable y subencionado te explican todo" 
                     user="Jose Chamorro pulido"
                     date="Julio 23, 2022"
-                    avatar="avatar-dummy.png"
+                    avatar="user_1.webp"
                 />
-            </div>
+            </article>
             <!-- * Item 1 * -->
-            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <article class="hidden duration-700 ease-in-out" data-carousel-item>
                 <Testimonial 
                     comment="Excelente servicio y atención" 
                     user="John López"
                     date="Junio 09, 2022"
-                    avatar="avatar-dummy.png"
+                    avatar="user_1.webp"
                 />
-            </div>
+            </article>
             <!-- * Item 1 * -->
-            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <article class="hidden duration-700 ease-in-out" data-carousel-item>
                 <Testimonial 
                     comment="Más que suficient para crear facturas y tenerlas organizadas." 
                     user="Lucía Izquierdo"
                     date="Octubre 23, 2021"
-                    avatar="avatar-dummy.png"
+                    avatar="user_1.webp"
                 />
-            </div>
+            </article>
             <!-- * Item 1 * -->
-            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <article class="hidden duration-700 ease-in-out" data-carousel-item>
                 <Testimonial 
                     comment="Súper contenta con esta aplicación. Soy negada para todo el tema de facturas y organización y con esta app jamás he tenido problemas. Muchas gracias xq me habéis resuelto un problema!" 
                     user="Inma Suárez"
                     date="Septiembre 20, 2021"
-                    avatar="avatar-dummy.png"
+                    avatar="user_1.webp"
                 />
-            </div>
+            </article>
             <!-- * Item 1 * -->
-            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <article class="hidden duration-700 ease-in-out" data-carousel-item>
                 <Testimonial 
                     comment="Funciona al 100%. Es una gran aplicación me ayido a generar dinero" 
                     user="Angel Díaz"
                     date="Enero 15, 2023"
-                    avatar="avatar-dummy.png"
+                    avatar="user_1.webp"
                 />
-            </div>
+            </article>
         </div>
 
-        <h2 class="text-sm font-normal text-center text-slate-500">
+        <h2 class="text-sm font-normal text-center text-blue-200">
             La evaluación general en <strong>Trustindex</strong> es <strong>4.2</strong> de 5, en base a 261 reseñas
         </h2>
         
         <!-- Slider controls -->
         <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
-            <span class="inline-flex items-center justify-center w-10 h-10 rounded-full hover:bg-slate-100 transition duration-500">
+            <span class="inline-flex items-center justify-center w-10 h-10 rounded-full hover:bg-white hover:opacity-50 transition duration-500 border border-slate-300">
                 <svg class="text-slate-300 w-4 h-4 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M5 1 1 5l4 4"/>
                 </svg>
@@ -71,7 +71,7 @@ import Testimonial from "./Testimonial.astro";
             </span>
         </button>
         <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
-            <span class="inline-flex items-center justify-center w-10 h-10 rounded-full hover:bg-slate-100 transition duration-500">
+            <span class="inline-flex items-center justify-center w-10 h-10 rounded-full hover:bg-white hover:opacity-50 transition duration-500 border border-slate-300">
                 <svg class="text-slate-300 w-4 h-4 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="m1 9 4-4-4-4"/>
                 </svg>
@@ -80,7 +80,16 @@ import Testimonial from "./Testimonial.astro";
         </button>
     </div>
     
-
+    <style>
+        .testimonials {
+            @apply py-[100px] text-white overflow-hidden;
+            background-color: #1C64F2;
+        background-image: url("/images/hero_bg.webp");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        }
+    </style>
 
     
     
