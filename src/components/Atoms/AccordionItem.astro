@@ -11,25 +11,27 @@ const {question, answer} = Astro.props;
                                                   
 <div 
     x-data="{ open: false }" x-cloak
-    class="font-medium border border-gray-200 bg-white rounded-md overflow-hidden mb-1">
-    <dt
-        x-on:click="open =!open"
-        class="flex items-center justify-between w-full p-5 font-medium text-gray-500 border-b border-b-1 focus:ring-4 focus:ring-transparent hover:bg-gray-100 gap-3 bg-gray-50 rounded-md cursor-pointer"
-    >
-        <span class="text-left">{question}</span>
-        <div :class="{'rotate-180': open, 'rotate-0': !open}"><IconArrow /></div>
-    </dt>
-    <dd 
-        x-show="open"   
-        x-transition:enter="fade-enter-active" 
-        x-transition:enter-start="fade-enter" 
-        x-transition:enter-end="fade-enter-active" 
-        x-transition:leave="fade-leave-active" 
-        x-transition:leave-start="fade-leave-active" 
-        x-transition:leave-end="fade-enter"
-        class="p-5">
-        <p class="mb-2 text-gray-500 font-light">{answer}</p>
-    </dd>
+    class="accordion">
+    <div class="accordion-container">
+        <dt
+            x-on:click="open =!open"
+            class="accordion-question"
+        >
+            <span class="text-left">{question}</span>
+            <div :class="{'rotate-180': open, 'rotate-0': !open}"><IconArrow /></div>
+        </dt>
+        <dd 
+            x-show="open"   
+            x-transition:enter="fade-enter-active" 
+            x-transition:enter-start="fade-enter" 
+            x-transition:enter-end="fade-enter-active" 
+            x-transition:leave="fade-leave-active" 
+            x-transition:leave-start="fade-leave-active" 
+            x-transition:leave-end="fade-enter"
+            class="accordion-answer">
+            <p class="mb-2 text-blue-900 font-light">{answer}</p>
+        </dd>
+    </div>
 </div>
 
 <style>
@@ -38,5 +40,24 @@ const {question, answer} = Astro.props;
     }
     .fade-enter, .fade-leave-to {
         opacity: 0;
+    }
+    .accordion{
+        @apply font-medium border mb-4 rounded-[16px] p-[2px] overflow-hidden;
+        background-image: linear-gradient(to bottom right, var(--green), var(--purple));
+    }
+    .accordion-container{
+        @apply bg-blue-50 rounded-[14px];
+    }
+    .accordion-question{
+        @apply flex items-center justify-between w-full p-5 font-semibold text-blue-950 hover:text-blue-700 gap-3 bg-white cursor-pointer transition-all ease-out duration-300 rounded-[14px];
+    }
+    .accordion-answer{
+        @apply p-5 font-medium;
+    }
+   .rotate-180{
+        transform: rotate(180deg);
+    }
+   .rotate-0{
+        transform: rotate(0deg);
     }
 </style>

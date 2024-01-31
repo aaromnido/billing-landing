@@ -2,10 +2,12 @@
 import AccordionItem from "./Atoms/AccordionItem.astro";
 ---
 
-<section class="bg-slate-200 py-20 px-6" id="faqs">
-    <div class="w-full max-w-[50rem] mx-auto">
+<section class="faqs" id="faqs">
+    <article class="w-full max-w-[50rem] mx-auto">
       <header>
-        <h2 class="text-4xl font-extrabold text-center mb-12">Preguntas frecuentes</h2>
+        <h2 class="text-4xl font-extrabold text-center mb-12">
+          Preguntas frecuentes
+        </h2>
       </header>
       <dl class="accordion">
         <AccordionItem 
@@ -28,5 +30,12 @@ import AccordionItem from "./Atoms/AccordionItem.astro";
           question="¿Ofrecen soporte técnico?" 
           answer="Sí, ofrecemos soporte técnico por correo electrónico y chat en vivo." />
       </dl>
-    </div>
+    </article>
 </section>
+
+<style>
+  .faqs{
+    @apply py-[100px] px-6;
+    background: var(--sky);
+  }
+</style>
