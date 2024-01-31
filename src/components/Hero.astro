@@ -1,6 +1,5 @@
 ---
 import CtaButtonPrimaryLarge from "./Atoms/CtaButtonPrimaryLarge.astro";
-import DummyImageScreenshot from "./Atoms/DummyImageScreenshot.astro";
 ---
 
 <section class="hero" id="hero">
@@ -18,14 +17,15 @@ import DummyImageScreenshot from "./Atoms/DummyImageScreenshot.astro";
             <CtaButtonPrimaryLarge />
         </header>
 
-        <img src="/images/hero_image.webp" alt="Hero image" class="hero-image mx-auto -mb-8" />
+        <img 
+            src="/images/hero_image.webp" alt="Hero image" class="hero-image mx-auto -mb-8" />
     </div>
 
 </section>
 
 <style>
     .hero {
-        background-color: black;
+        background-color: #1C64F2;
         @apply px-2 md:pt-12 text-white overflow-hidden;
         background-image: url("/images/hero_bg.webp");
         background-size: cover;
