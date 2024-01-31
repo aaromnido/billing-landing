@@ -2,15 +2,40 @@
 import PartnerLogo from "./Atoms/PartnerLogo.astro";
 ---
 
-<section class="bg-gray-400 py-2 px-4 text-center">
-
-    <div class="my-6 flex justify-center">
-            <PartnerLogo color="text-slate-700" />
-            <PartnerLogo color="text-slate-700" />
-            <PartnerLogo color="text-slate-700" />
-            <PartnerLogo color="text-slate-700" />
-            <PartnerLogo color="text-slate-700" />
-            <PartnerLogo color="text-slate-700" />
+<section class="footer-logos">
+    <div class="footer-logos-container">
+        <figure class="footer-logos-logo">
+            <img src="/images/footer_sello_antifraude.webp" alt="Sello antifraude">
+        </figure>
+        <figure class="footer-logos-logo">
+            <img src="/images/footer_cdti.webp" alt="CDTI">
+        </figure>
+        <figure class="footer-logos-logo">
+            <img src="/images/footer_enisa.webp" alt="Enisa">
+        </figure>
+        <figure class="footer-logos-logo">
+            <img src="/images/footer_geotrust.webp" alt="Geotrust">
+        </figure>
+        <figure class="footer-logos-logo">
+            <img src="/images/footer_pyme_innovadora.webp" alt="PYME Innovadora">
+        </figure>
+        <figure class="footer-logos-logo">
+            <img src="/images/google_cloud_footer.webp" alt="Google Cloud">
+        </figure>
     </div> 
-
 </section>
+
+<style>
+    .footer-logos {
+        @apply bg-gray-100 py-[20px] px-4 text-center;
+    }
+    .footer-logos-container {
+        @apply my-6 flex justify-center items-center;
+    }
+    .footer-logos-logo {
+        @apply px-4 ;
+    }
+    .footer-logos-logo img {
+        @apply opacity-80;
+    }
+</style>
