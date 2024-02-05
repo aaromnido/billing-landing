@@ -1,0 +1,1 @@
+import"https://flackr.github.io/scroll-timeline/dist/scroll-timeline.js";import"./ViewTransitions.astro_astro_type_script_index_0_lang.l-JsOPk0.js";window.cookieBanner=function(){return{showBanner:!1,init(){this.showBanner=localStorage.getItem("cookiesAceptadas")!=="true"},aceptarCookies(){localStorage.setItem("cookiesAceptadas","true"),this.showBanner=!1}}};
